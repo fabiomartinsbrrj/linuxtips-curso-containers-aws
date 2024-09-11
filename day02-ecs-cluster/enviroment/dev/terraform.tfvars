@@ -23,3 +23,13 @@ ssm_private_subnet_3 = "/linuxtips-vpc/vpc/subnet_private_1c"
 load_balancer_internal = false
 
 load_balancer_type = "application"
+
+#### ECS General #####
+
+nodes_ami = ""
+
+nodes_instance_type = "t3a.large"
+
+node_volume_size = "50"
+
+node_volume_type = "gp3"
