@@ -1,4 +1,4 @@
-resource "aws_security_group" "mnain" {
+resource "aws_security_group" "main" {
   name = format("%s-main", var.project_name)
 
   vpc_id = data.aws_ssm_parameter.vpc.value

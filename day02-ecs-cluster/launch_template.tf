@@ -7,7 +7,7 @@ resource "aws_launch_template" "on_demand" {
   instance_type = var.node_instance_type
 
   vpc_security_group_ids = [
-    aws_security_group.mnain.id
+    aws_security_group.main.id
   ]
 
   iam_instance_profile {
