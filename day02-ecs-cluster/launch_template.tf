@@ -4,12 +4,14 @@ resource "aws_launch_template" "on_demand" {
 
   image_id = var.nodes_ami
 
-  vpc_security_group_ids = [ 
+  instance_type = var.node_instance_type
+
+  vpc_security_group_ids = [
     aws_security_group.mnain.id
-   ]
+  ]
 
   iam_instance_profile {
-    name = "ecsInstanceRole"
+    name = aws_iam_instance_profile.main.name
   }
 
   update_default_version = true
